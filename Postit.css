@@ -1,0 +1,156 @@
+/* ==============================================
+   postit.css
+   Styling for the Social Media Posting activity.
+   Theme: dark navy card on a teal background,
+   green headings (matches the original mockup).
+   ============================================== */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #a9e0e0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #12172b;
+  border-radius: 10px;
+  padding: 30px 40px 40px 40px;
+  color: #e8fdf3;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: #35d07f;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #8fd6c9;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #35d07f;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #35d07f;
+}
+
+label {
+  display: block;
+  color: #35d07f;
+  font-weight: bold;
+  margin: 16px 0 6px 0;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#continueBtn,
+#postBtn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background-color: #7ec8d8;
+  color: #12172b;
+  font-size: 15px;
+}
+
+#continueBtn:hover,
+#postBtn:hover {
+  background-color: #5fb3c6;
+}
+
+#backBtn {
+  background-color: #2e5cb8;
+  color: #ffffff;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+}
+
+#backBtn:hover {
+  background-color: #244a94;
+}
+
+.postsBox {
+  margin-top: 30px;
+  background-color: #12172b;
+  border: 1px solid #274158;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.postsBox hr {
+  border: none;
+  border-top: 1px solid #274158;
+  margin-bottom: 15px;
+}
+
+.emptyMsg {
+  color: #8fd6c9;
+  text-align: center;
+}
+
+.postCard {
+  background-color: #1b2340;
+  border: 1px solid #2c3a63;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+
+.postCard .postLabel {
+  color: #35d07f;
+  font-weight: bold;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.postCard .originalText {
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.postCard .encryptedText {
+  color: #8fd6c9;
+  word-break: break-all;
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+}
