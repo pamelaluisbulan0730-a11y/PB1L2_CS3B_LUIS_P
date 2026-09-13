@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Media Posting - AES 192 Symmetric Encryption</title>
+
+  <!-- CryptoJS 4.2.0 via Cloudflare CDN (cdnjs) - used for AES 192 encryption -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+
+  <!-- Our stylesheet -->
+  <link rel="stylesheet" href="postit.css">
+</head>
+<body>
+
+  <!-- ============================================
+       SECTION 1: USER INFORMATION (asked ONE TIME only)
+       This is NOT a signup/login system. It just collects
+       the user's info once, then everything is remembered
+       for the rest of the session using sessionStorage.
+       ============================================ -->
+  <div class="container" id="infoSection">
+    <h1>Social Media Posting</h1>
+    <p class="subtitle">AES 192 Symmetric Encryption</p>
+
+    <h2>User Information</h2>
+
+    <form id="infoForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" placeholder="Enter full name" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" required>
+
+      <label for="yearLevel">Year Level</label>
+      <select id="yearLevel" required>
+        <option value="" disabled selected>Select Year Level</option>
+        <option value="1st Year">1st Year</option>
+        <option value="2nd Year">2nd Year</option>
+        <option value="3rd Year">3rd Year</option>
+        <option value="4th Year">4th Year</option>
+      </select>
+
+      <label for="gender">Gender</label>
+      <select id="gender" required>
+        <option value="" disabled selected>Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Prefer not to say">Prefer not to say</option>
+      </select>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password" required>
+
+      <button type="submit" id="continueBtn">CONTINUE TO ACCESS</button>
+    </form>
+  </div>
+
+  <!-- ============================================
+       SECTION 2: CREATE POST + THREAD OF POSTS
+       Hidden until the user info form above is submitted.
+       Caption-only posting, no picture upload (per instructions).
+       ============================================ -->
+  <div class="container hidden" id="postSection">
+
+    <button id="backBtn">&larr; Back to Information</button>
+
+    <h2>Create Post</h2>
+
+    <label for="caption">CAPTION</label>
+    <textarea id="caption" placeholder="What's on your mind?"></textarea>
+
+    <button id="postBtn">POST</button>
+
+    <div class="postsBox">
+      <h3>MY Posts</h3>
+      <hr>
+      <!-- Posts get injected here by postit.js -->
+      <div id="postsList">
+        <p class="emptyMsg">No posts yet. Still waiting networks!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our script, loaded last so the DOM above already exists -->
+  <script src="postit.js"></script>
+</body>
+</html>
+
+
